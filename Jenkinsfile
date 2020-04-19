@@ -87,6 +87,11 @@ pipeline {
                 sh 'npm i'
                 sh 'npm run test'
             }
+            post {
+                always {
+                    publishHTML([allowMissing: false, alwaysLinkToLastBuild: true, keepAll: true, includes: '.tmp/report/**/*,**/**/*', reportDir: '.tmp/report/', reportFiles: 'index.html', reportName: 'Cucumber report', reportTitles: ''])
+                }
+            }
         }
     }
 }
