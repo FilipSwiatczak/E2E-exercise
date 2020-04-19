@@ -1,0 +1,19 @@
+{
+  "compilerOptions": {
+    "alwaysStrict": true,
+    "target": "es2019",
+    "module": "commonjs",
+    "noImplicitAny": false,
+    "baseUrl": ".",
+    "paths": {
+      "*": ["./*"],
+      "src/*": ["./src/*"]
+    },
+    "types": ["node", "@wdio/sync"],
+    "moduleResolution": "node",
+    "outDir": "tsrc/"
+  },
+  "include": ["./src/**/*.ts"],
+  "exclude": ["./node_modules"],
+  "compileOnSave": false
+}
